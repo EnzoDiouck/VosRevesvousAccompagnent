@@ -14,6 +14,12 @@ import flash1 from "@/assets/flash-1.jpg";
 import flash2 from "@/assets/flash-2.jpg";
 import flash3 from "@/assets/flash-3.jpg";
 import flash4 from "@/assets/flash-4.jpg";
+import shop1 from "@/assets/shop-1.jpg";
+import shop2 from "@/assets/shop-2.jpg";
+import shop3 from "@/assets/shop-3.jpg";
+import shop4 from "@/assets/shop-4.jpg";
+import shop5 from "@/assets/shop-5.jpg";
+import shop6 from "@/assets/shop-6.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -187,6 +193,58 @@ function HomePage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* BOUTIQUE ETSY */}
+      <section id="boutique" className="relative px-6 py-24 max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.25em] text-ink/40 mb-3">Boutique · Etsy</p>
+            <h2 className="font-serif text-4xl md:text-5xl italic">L'atelier en objets</h2>
+            <p className="text-ink/65 mt-4 max-w-md leading-relaxed">
+              Tirages, pins, stickers et textiles peints à la main —
+              expédiés depuis Paris via ma boutique Etsy.
+            </p>
+          </div>
+          <a
+            href="https://www.etsy.com/shop/elisabloom"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-2 self-start sm:self-end text-xs uppercase tracking-widest border-b border-ink/30 hover:border-ink pb-1"
+          >
+            Voir la boutique Etsy →
+          </a>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
+          {[
+            { img: shop1, title: "Tirage Pivoine A4", tag: "Art print", price: 28 },
+            { img: shop2, title: "Pin Monarque émaillé", tag: "Accessoire", price: 14 },
+            { img: shop3, title: "Carnet de flashs n°3", tag: "Édition limitée", price: 42 },
+            { img: shop4, title: "Tote bag Méduse", tag: "Textile", price: 32 },
+            { img: shop5, title: "Pack stickers aquarelle", tag: "Stickers", price: 12 },
+            { img: shop6, title: "Tirage Floraison encadré", tag: "Art print · 30×40", price: 95 },
+          ].map((p) => (
+            <a
+              key={p.title}
+              href="https://www.etsy.com/shop/elisabloom"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="group block"
+            >
+              <div className="aspect-square overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm">
+                <img src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="mt-4 flex items-baseline justify-between gap-2">
+                <div className="min-w-0">
+                  <p className="font-serif text-lg leading-tight truncate group-hover:italic transition-all">{p.title}</p>
+                  <p className="text-[11px] text-ink/50 uppercase tracking-wider">{p.tag}</p>
+                </div>
+                <p className="font-serif text-xl shrink-0">{p.price}€</p>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
