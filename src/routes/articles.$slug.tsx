@@ -53,7 +53,7 @@ function ArticleDetail() {
           <p className="text-2xl italic text-ink first-line:tracking-wide">
             {article.excerpt}
           </p>
-          {article.content.map((p, i) => (
+          {article.content.map((p: string, i: number) => (
             <p key={i}>{p}</p>
           ))}
         </div>
