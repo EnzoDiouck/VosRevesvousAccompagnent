@@ -6,6 +6,7 @@ const navItems = [
   { label: "À propos", to: "/", hash: "#apropos" },
   { label: "Réalisations", to: "/", hash: "#realisations" },
   { label: "Flash", to: "/", hash: "#flash" },
+  { label: "Boutique", to: "/", hash: "#boutique" },
   { label: "Articles", to: "/articles", hash: "" },
   { label: "Rendez-vous", to: "/", hash: "#rdv" },
 ];

@@ -14,6 +14,12 @@ import flash1 from "@/assets/flash-1.jpg";
 import flash2 from "@/assets/flash-2.jpg";
 import flash3 from "@/assets/flash-3.jpg";
 import flash4 from "@/assets/flash-4.jpg";
+import shop1 from "@/assets/shop-1.jpg";
+import shop2 from "@/assets/shop-2.jpg";
+import shop3 from "@/assets/shop-3.jpg";
+import shop4 from "@/assets/shop-4.jpg";
+import shop5 from "@/assets/shop-5.jpg";
+import shop6 from "@/assets/shop-6.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
