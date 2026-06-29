@@ -1,19 +1,18 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WatercolorBackdrop } from "@/components/WatercolorBackdrop";
-import { articles } from "@/lib/articles";
 
 import portrait from "@/assets/portrait.jpg";
-import tattoo1 from "@/assets/tattoo-1.jpg";
-import tattoo2 from "@/assets/tattoo-2.jpg";
-import tattoo3 from "@/assets/tattoo-3.jpg";
-import tattoo4 from "@/assets/tattoo-4.jpg";
-import flash1 from "@/assets/flash-1.jpg";
-import flash2 from "@/assets/flash-2.jpg";
-import flash3 from "@/assets/flash-3.jpg";
-import flash4 from "@/assets/flash-4.jpg";
+import flash1 from "@/assets/falsh1.jpg.asset.json";
+import flash2 from "@/assets/flash2.jpg.asset.json";
+import flash3 from "@/assets/flash3.jpg.asset.json";
+import flash4 from "@/assets/flash4.jpg.asset.json";
+import ig1 from "@/assets/ig1.webp.asset.json";
+import ig2 from "@/assets/ig2.webp.asset.json";
+import ig3 from "@/assets/ig3.webp.asset.json";
+import ig4 from "@/assets/ig4.webp.asset.json";
 import shop1 from "@/assets/shop-1.jpg";
 import shop2 from "@/assets/shop-2.jpg";
 import shop3 from "@/assets/shop-3.jpg";
@@ -24,43 +23,28 @@ import shop6 from "@/assets/shop-6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Elisa Bloom — Tatouages aquarelle sur mesure" },
-      { name: "description", content: "Artiste tatoueuse spécialisée dans le style aquarelle. Réalisations sur mesure, flashes disponibles, prise de rendez-vous en ligne." },
+      { title: "Vos Rêves vous Accompagnent — Élodie, tatoueuse aquarelle" },
+      { name: "description", content: "Élodie, artiste tatoueuse spécialisée dans le style aquarelle. Réalisations sur mesure, flashes disponibles, prise de rendez-vous en ligne." },
     ],
   }),
   component: HomePage,
 });
 
-type Realisation = {
-  img: string;
-  title: string;
-  style: string;
-  size: "S" | "M" | "L";
-  price: number;
-  aspect: string;
-};
-
-const realisations: Realisation[] = [
-  { img: tattoo1, title: "Pivoine de printemps", style: "Floral", size: "M", price: 350, aspect: "aspect-[3/4]" },
-  { img: tattoo2, title: "L'envol", style: "Animal", size: "S", price: 180, aspect: "aspect-square" },
-  { img: tattoo3, title: "Géométrie liquide", style: "Abstrait", size: "M", price: 220, aspect: "aspect-square" },
-  { img: tattoo4, title: "Lune cosmique", style: "Cosmos", size: "L", price: 400, aspect: "aspect-[3/4]" },
+const realisations = [
+  { img: ig1.url, title: "Réalisation récente", url: "https://www.instagram.com/p/DO-XU39DfKB/" },
+  { img: ig2.url, title: "Composition aquarelle", url: "https://www.instagram.com/p/DNkPDdaM9jE/" },
+  { img: ig3.url, title: "Pièce sur mesure", url: "https://www.instagram.com/p/DKRWce9MNBw/" },
+  { img: ig4.url, title: "Projet floral", url: "https://www.instagram.com/p/DJgJr-Ysyr2/" },
 ];
 
 const flashes = [
-  { img: flash1, title: "Méduse Éthérée", size: "12–15 cm", price: 250 },
-  { img: flash2, title: "Monarque Pastel", size: "8 cm", price: 150 },
-  { img: flash3, title: "Baleine Bleue", size: "10–14 cm", price: 220 },
-  { img: flash4, title: "Bouquet Sauvage", size: "15 cm", price: 290 },
+  { img: flash1.url, title: "Sauvage", size: "15–20 cm" },
+  { img: flash2.url, title: "Chat plumes", size: "12–15 cm" },
+  { img: flash3.url, title: "Zèbre éclatant", size: "15 cm" },
+  { img: flash4.url, title: "Ange — Respire / Espère", size: "18 cm" },
 ];
 
-const filters = ["Tout", "Floral", "Animal", "Abstrait", "Cosmos"] as const;
-type Filter = (typeof filters)[number];
-
 function HomePage() {
-  const [filter, setFilter] = useState<Filter>("Tout");
-  const filtered = filter === "Tout" ? realisations : realisations.filter((r) => r.style === filter);
-
   return (
     <div className="min-h-screen relative">
       <WatercolorBackdrop />
@@ -70,22 +54,22 @@ function HomePage() {
       <section id="apropos" className="relative px-6 pt-16 pb-24 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="animate-fade-up order-2 md:order-1">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-ink/40 mb-6">L'artiste · Paris</p>
+            <p className="text-[11px] uppercase tracking-[0.25em] text-ink/40 mb-6">Élodie · Artiste tatoueuse</p>
             <h1 className="font-serif text-5xl md:text-6xl leading-[1.05] italic mb-8 text-balance">
-              L'art de la peau,<br />peint à l'eau.
+              Vos rêves<br />vous accompagnent.
             </h1>
             <div className="space-y-5 text-ink/75 leading-relaxed max-w-prose">
               <p>
-                Bienvenue. Je m'appelle Elisa, et je tatoue depuis huit ans
-                dans le style aquarelle — celui des pigments qui se
-                diffusent, des transparences qui se superposent, des
-                couleurs qui respirent.
+                Bienvenue dans mon atelier. Je suis Élodie, tatoueuse
+                spécialisée dans le style aquarelle — celui des
+                pigments qui se diffusent, des transparences qui se
+                superposent, des couleurs qui respirent.
               </p>
               <p>
-                Mon travail puise dans la peinture sur papier, dans les
-                jardins botaniques et dans les ciels d'orage. Chaque
-                projet commence par un échange long et précis : je ne
-                tatoue jamais deux fois le même motif.
+                Mon travail puise dans la peinture sur papier, dans
+                la nature et dans vos histoires. Chaque projet
+                commence par un échange long et précis : je ne tatoue
+                jamais deux fois le même motif.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -104,7 +88,7 @@ function HomePage() {
               <div className="absolute -inset-3 bg-paper/40 rounded-[2rem] -rotate-2" />
               <img
                 src={portrait}
-                alt="Portrait d'Elisa, tatoueuse aquarelle"
+                alt="Portrait d'Élodie, tatoueuse aquarelle"
                 width={800}
                 height={1000}
                 className="relative w-full aspect-[4/5] object-cover rounded-[1.75rem] ring-1 ring-black/5 shadow-2xl shadow-black/10"
@@ -117,50 +101,42 @@ function HomePage() {
         </div>
       </section>
 
-      {/* REALISATIONS */}
+      {/* REALISATIONS — Instagram */}
       <section id="realisations" className="relative px-6 py-20 max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.25em] text-ink/40 mb-3">Galerie</p>
+            <p className="text-[11px] uppercase tracking-[0.25em] text-ink/40 mb-3">Galerie · Instagram</p>
             <h2 className="font-serif text-4xl md:text-5xl">Réalisations</h2>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {filters.map((f) => (
-              <button
-                key={f}
-                onClick={() => setFilter(f)}
-                className={`px-4 py-1.5 text-xs uppercase tracking-widest rounded-full border transition-colors ${
-                  filter === f
-                    ? "bg-ink text-paper border-ink"
-                    : "border-border text-ink/60 hover:border-ink/40"
-                }`}
-              >
-                {f}
-              </button>
-            ))}
-          </div>
+          <a
+            href="https://www.instagram.com/vosrevesvousaccompagnent/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-xs uppercase tracking-widest border-b border-ink/30 hover:border-ink pb-1 self-start sm:self-end"
+          >
+            Voir plus sur Instagram →
+          </a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {filtered.map((r, i) => (
-            <figure
-              key={r.title}
-              className={`group relative overflow-hidden rounded-2xl bg-paper ring-1 ring-black/5 ${i % 3 === 1 ? "md:translate-y-8" : ""}`}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {realisations.map((r) => (
+            <a
+              key={r.url}
+              href={r.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="group relative block overflow-hidden rounded-2xl bg-paper ring-1 ring-black/5"
             >
               <img
                 src={r.img}
                 alt={r.title}
                 loading="lazy"
-                className={`w-full ${r.aspect} object-cover transition-transform duration-700 group-hover:scale-105`}
+                className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <figcaption className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-ink/85 via-ink/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <p className="text-paper/70 text-[10px] uppercase tracking-widest mb-1">{r.style} · {r.size}</p>
-                <div className="flex items-end justify-between gap-3">
-                  <p className="font-serif italic text-paper text-xl leading-tight">{r.title}</p>
-                  <p className="font-serif text-paper text-2xl whitespace-nowrap">{r.price}€</p>
-                </div>
-              </figcaption>
-            </figure>
+              <div className="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="text-paper font-serif italic text-lg">{r.title}</p>
+              </div>
+            </a>
           ))}
         </div>
       </section>
@@ -180,15 +156,14 @@ function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {flashes.map((f) => (
               <article key={f.title} className="group">
-                <div className="aspect-square overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm">
-                  <img src={f.img} alt={f.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 shadow-sm">
+                  <img src={f.img} alt={f.title} loading="lazy" className="w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="mt-4 flex items-baseline justify-between gap-2">
                   <div className="min-w-0">
                     <p className="font-serif text-lg leading-tight truncate">{f.title}</p>
                     <p className="text-[11px] text-ink/50 uppercase tracking-wider">{f.size}</p>
                   </div>
-                  <p className="font-serif text-xl shrink-0">{f.price}€</p>
                 </div>
               </article>
             ))}
@@ -204,11 +179,11 @@ function HomePage() {
             <h2 className="font-serif text-4xl md:text-5xl italic">L'atelier en objets</h2>
             <p className="text-ink/65 mt-4 max-w-md leading-relaxed">
               Tirages, pins, stickers et textiles peints à la main —
-              expédiés depuis Paris via ma boutique Etsy.
+              expédiés via ma boutique Etsy.
             </p>
           </div>
           <a
-            href="https://www.etsy.com/shop/elisabloom"
+            href="https://www.etsy.com/shop/vosrevesvousaccompagnent"
             target="_blank"
             rel="noreferrer noopener"
             className="inline-flex items-center gap-2 self-start sm:self-end text-xs uppercase tracking-widest border-b border-ink/30 hover:border-ink pb-1"
@@ -228,7 +203,7 @@ function HomePage() {
           ].map((p) => (
             <a
               key={p.title}
-              href="https://www.etsy.com/shop/elisabloom"
+              href="https://www.etsy.com/shop/vosrevesvousaccompagnent"
               target="_blank"
               rel="noreferrer noopener"
               className="group block"
@@ -244,37 +219,6 @@ function HomePage() {
                 <p className="font-serif text-xl shrink-0">{p.price}€</p>
               </div>
             </a>
-          ))}
-        </div>
-      </section>
-
-      {/* ARTICLES */}
-      <section id="articles" className="relative px-6 py-24 max-w-6xl mx-auto">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <p className="text-[11px] uppercase tracking-[0.25em] text-ink/40 mb-3">Journal</p>
-            <h2 className="font-serif text-4xl md:text-5xl">Articles</h2>
-          </div>
-          <Link to="/articles" className="text-xs uppercase tracking-widest text-ink/60 hover:text-ink hidden sm:inline">
-            Tous les articles →
-          </Link>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {articles.map((a) => (
-            <article key={a.slug} className="group">
-              <Link to="/articles/$slug" params={{ slug: a.slug }} className="block">
-                <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-5 ring-1 ring-black/5">
-                  <img src={a.cover} alt={a.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-ink/40 mb-2">{a.category} · {a.date}</p>
-                <h3 className="font-serif text-2xl leading-snug mb-2 group-hover:italic transition-all">{a.title}</h3>
-                <p className="text-sm text-ink/65 leading-relaxed line-clamp-3 mb-3">{a.excerpt}</p>
-                <span className="text-xs uppercase tracking-widest border-b border-ink/30 group-hover:border-ink pb-0.5">
-                  Lire la suite
-                </span>
-              </Link>
-            </article>
           ))}
         </div>
       </section>
@@ -373,7 +317,7 @@ function BookingForm() {
         <div className="text-center py-12 space-y-3">
           <p className="font-serif italic text-3xl">Merci.</p>
           <p className="text-ink/65 max-w-xs mx-auto">
-            Votre demande est partie. Je vous réponds dans les 48 h à l'adresse indiquée.
+            Votre demande est partie. Élodie vous répond dans les 48 h à l'adresse indiquée.
           </p>
         </div>
       ) : (
