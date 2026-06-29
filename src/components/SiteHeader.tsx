@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logo from "@/assets/logo.jpg.asset.json";
 
 const navItems = [
   { label: "Accueil", to: "/", hash: "" },
@@ -7,7 +8,6 @@ const navItems = [
   { label: "Réalisations", to: "/", hash: "#realisations" },
   { label: "Flash", to: "/", hash: "#flash" },
   { label: "Boutique", to: "/", hash: "#boutique" },
-  { label: "Articles", to: "/articles", hash: "" },
   { label: "Rendez-vous", to: "/", hash: "#rdv" },
 ];
 
@@ -15,10 +15,18 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-paper/75 backdrop-blur-md border-b border-border/60">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="font-serif italic text-2xl tracking-tight">
-          Elisa Bloom
+    <header className="sticky top-0 z-50 bg-paper/80 backdrop-blur-md border-b border-border/60">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logo.url}
+            alt="Vos Rêves vous Accompagnent"
+            className="h-14 w-auto object-contain"
+          />
+          <span className="hidden sm:block leading-tight">
+            <span className="block font-serif italic text-xl">Vos Rêves vous Accompagnent</span>
+            <span className="block text-[10px] uppercase tracking-[0.25em] text-ink/50">Élodie · Artiste tatoueuse</span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8 text-[13px] tracking-wide">
