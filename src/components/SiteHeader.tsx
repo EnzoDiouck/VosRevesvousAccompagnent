@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logo from "@/assets/logo.jpg.asset.json";
+import logo from "@/assets/logo.jpg";
 
 const navItems = [
   { label: "Accueil", to: "/", hash: "" },
@@ -19,9 +19,9 @@ export function SiteHeader() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
           <img
-            src={logo.url}
-            alt="Vos Rêves vous Accompagnent"
-            className="h-14 w-auto object-contain"
+            src={logo}
+            alt="Logo Vos Rêves vous Accompagnent"
+            className="h-12 w-auto object-contain"
           />
           <span className="hidden sm:block leading-tight">
             <span className="block font-serif italic text-xl">Vos Rêves vous Accompagnent</span>

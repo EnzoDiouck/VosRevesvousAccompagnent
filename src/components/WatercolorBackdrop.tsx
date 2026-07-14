@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import bg1 from "@/assets/bg1.jpg.asset.json";
-import bg2 from "@/assets/bg2.jpg.asset.json";
-import bg3 from "@/assets/bg3.jpg.asset.json";
-import bg4 from "@/assets/bg4.jpg.asset.json";
-import bg5 from "@/assets/bg5.jpg.asset.json";
+import bg1 from "@/assets/bg1.jpg";
+import bg2 from "@/assets/bg2.jpg";
+import bg3 from "@/assets/bg3.jpg";
+import bg4 from "@/assets/bg4.jpg";
+import bg5 from "@/assets/bg5.jpg";
 
 /**
  * Real watercolor papers as the page background.
@@ -50,7 +50,7 @@ export function WatercolorBackdrop() {
         return (
           <img
             key={i}
-            src={src.url}
+            src={src}
             alt=""
             loading={i === 0 ? "eager" : "lazy"}
             className="absolute inset-0 w-full h-full object-cover will-change-transform"

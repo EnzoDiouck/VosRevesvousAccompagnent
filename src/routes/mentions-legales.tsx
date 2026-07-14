@@ -39,7 +39,7 @@ function MentionsLegales() {
         </Block>
 
         <Block title="Hébergement">
-          <p>Le site est hébergé par Lovable Cloud. Pour toute demande relative à l'hébergement, contactez l'éditeur qui transmettra la demande.</p>
+          <p>Le site est hébergé par un prestataire technique tiers. Pour toute demande relative à l'hébergement, contactez l'éditeur du site.</p>
         </Block>
 
         <Block title="Propriété intellectuelle">
@@ -82,7 +82,7 @@ function MentionsLegales() {
 
         <Block title="Crédits">
           <p>Photographies et illustrations : © Élodie — Vos Rêves vous Accompagnent.</p>
-          <p>Conception & réalisation du site : Lovable.</p>
+          <p>Conception & réalisation du site : Vos Rêves vous Accompagnent.</p>
         </Block>
       </section>
 
