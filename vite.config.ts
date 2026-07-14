@@ -8,6 +8,13 @@ export default defineConfig({
     tanstackStart({
       // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
       server: { entry: "server" },
+      // Site vitrine sans backend : on prérend toutes les pages en HTML statique
+      // au build, pour un hébergement Netlify 100% statique (pas de fonction serveur).
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+        autoStaticPathsDiscovery: true,
+      },
     }),
     viteReact(),
     tailwindcss(),
