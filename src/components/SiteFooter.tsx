@@ -34,7 +34,10 @@ export function SiteFooter() {
 
       <div className="relative max-w-6xl mx-auto px-6 pb-8 flex flex-col sm:flex-row gap-3 justify-between text-[10px] uppercase tracking-[0.2em] text-ink/40">
         <p>© {new Date().getFullYear()} Vos Rêves vous Accompagnent — Élodie</p>
-        <p>Mentions légales</p>
+        <div className="flex gap-6">
+          <a href="/mentions-legales" className="hover:text-ink">Mentions légales</a>
+          <a href="/conditions-utilisation" className="hover:text-ink">Conditions d'utilisation</a>
+        </div>
       </div>
     </footer>
   );
