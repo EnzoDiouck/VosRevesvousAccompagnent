@@ -44,5 +44,4 @@ Puis ouvre http://localhost:8000.
 
 ## À vérifier avant la publication définitive
 
-- [ ] Remplacer les 3 photos de `images/uploads/` (recadrées depuis la maquette) par les originaux.
 - [ ] Mentions légales : adresse de domiciliation (partie 1) et adresse de Netlify (partie 2).
