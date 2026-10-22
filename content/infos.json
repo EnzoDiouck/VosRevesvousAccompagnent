@@ -1,0 +1,31 @@
+{
+  "nom_site": "Vos rêves vous accompagnent",
+  "accroche": "Et si votre histoire devenait un tatouage ?",
+  "lien_tarif": "https://tally.so/r/q5ZWOd",
+  "intro_titre": "Une histoire, une émotion, un souvenir…",
+  "intro_texte": "Ensemble, imaginons un tatouage personnalisé qui te ressemble.\n\nChaque projet commence par une rencontre et se construit autour de ce qui compte pour toi. Je mêle réalisme, graphisme, aquarelle et symbolique pour donner forme à ton histoire.",
+  "etapes": [
+    {
+      "titre": "L'histoire",
+      "sous_titre": "Une histoire à raconter",
+      "image": "/images/uploads/histoire.jpg",
+      "texte": "Chaque tatouage commence par une histoire. Un souvenir, une personne chère, une passion, une étape de vie… Nous partons de ce qui compte pour toi pour imaginer un tatouage qui a du sens."
+    },
+    {
+      "titre": "La symbolique",
+      "sous_titre": "Donner forme à l'invisible",
+      "image": "/images/uploads/symbolique.jpg",
+      "texte": "Une fleur, un animal, un objet ou un détail chargé de sens… Nous choisissons les symboles qui traduisent ton histoire et tes émotions, parfois là où les mots ne suffisent plus."
+    },
+    {
+      "titre": "La création",
+      "sous_titre": "Une œuvre qui te ressemble",
+      "image": "/images/uploads/creation.jpg",
+      "texte": "Je compose ensuite un tatouage sur mesure, en mêlant mon univers graphique, le réalisme, la couleur et les contrastes. Chaque élément trouve sa place dans une création singulière, pensée pour toi et pour ton histoire."
+    }
+  ],
+  "photo": "/images/portrait.jpg",
+  "titre_univers": "Entre dans mon univers…",
+  "presentation": "Découvre mes réalisations de tatouages, les histoires qui prennent vie à travers mes créations et mes flashs disponibles.",
+  "instagram": "vosrevesvousaccompagnent"
+}

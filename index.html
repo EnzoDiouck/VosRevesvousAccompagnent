@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vos rêves vous accompagnent — Tatouage à Coulommiers & en Bretagne</title>
+  <meta name="description" content="Tatouages personnalisés : réalisme, graphisme, aquarelle et symbolique. Tatouage à Coulommiers et en Bretagne.">
+  <meta property="og:title" content="Vos rêves vous accompagnent — Tatouage">
+  <meta property="og:description" content="Et si votre histoire devenait un tatouage ?">
+  <meta property="og:image" content="/images/logo.jpg">
+  <link rel="icon" href="/images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Great+Vibes&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#accueil" class="brand" aria-label="Retour en haut">
+      <img src="/images/logo.jpg" alt="" class="brand-logo">
+      <span class="brand-name" data-bind="nom_site">Vos rêves vous accompagnent</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <span></span><span></span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="#demarche">Ma démarche</a>
+      <a href="#univers">Mon univers</a>
+      <a href="https://tally.so/r/q5ZWOd" class="nav-cta tarif-link" target="_blank" rel="noopener">Idée de tarif</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Accueil -->
+    <section id="accueil" class="hero">
+      <p class="kicker">Tatouage à Coulommiers &amp; en Bretagne</p>
+      <h1 class="hero-title" data-bind="accroche">Et si votre histoire devenait un tatouage ?</h1>
+      <div class="actions">
+        <a href="https://tally.so/r/q5ZWOd" class="btn tarif-link" target="_blank" rel="noopener">Avoir une idée de tarif</a>
+        <a href="#demarche" class="btn btn-ghost">Ma démarche</a>
+      </div>
+    </section>
+
+    <!-- Démarche -->
+    <section id="demarche" class="section">
+      <div class="intro">
+        <h2 class="title" data-bind="intro_titre">Une histoire, une émotion, un souvenir…</h2>
+        <div class="prose" data-bind-paragraphs="intro_texte"></div>
+      </div>
+      <ol id="etapes" class="etapes"></ol>
+    </section>
+
+    <!-- Mon univers -->
+    <section id="univers" class="section section-grey univers">
+      <div class="univers-grid">
+        <figure class="portrait">
+          <img src="/images/encre.png" alt="" class="encre" aria-hidden="true">
+          <img src="/images/portrait.jpg" alt="Portrait de la tatoueuse" class="portrait-img" data-bind-src="photo">
+        </figure>
+        <div>
+          <h2 class="title title-accent" data-bind="titre_univers">Entre dans mon univers…</h2>
+          <div class="prose" data-bind-paragraphs="presentation"></div>
+          <a href="#" class="btn insta-link" target="_blank" rel="noopener" hidden>Voir mon Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2 class="title">Et si on imaginait ton tatouage ?</h2>
+      <p>Tu as une idée, une histoire à raconter ou simplement une envie qui mûrit ? Parle-moi de ton projet. Quelques réponses me permettront de mieux comprendre tes attentes et de te donner une première idée de tarif.</p>
+      <div class="actions">
+        <a href="https://tally.so/r/q5ZWOd" class="btn tarif-link" target="_blank" rel="noopener">Avoir une idée de tarif</a>
+        <a href="#" class="btn btn-light insta-link" target="_blank" rel="noopener" hidden>Instagram</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <img src="/images/logo.jpg" alt="" class="footer-logo">
+    <p>Tatouage · Coulommiers &amp; Bretagne</p>
+    <p class="small">© <span id="year"></span> · <a href="/mentions-legales.html">Mentions légales et politique de confidentialité</a></p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

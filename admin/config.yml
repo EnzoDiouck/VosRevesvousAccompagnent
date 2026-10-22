@@ -1,0 +1,42 @@
+# Espace d'administration (Decap CMS) — accessible sur /admin
+backend:
+  name: git-gateway
+  branch: main
+
+locale: fr
+site_url: /
+display_url: /
+logo_url: /images/logo.jpg
+
+# Où vont les images envoyées depuis l'admin
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Mon site"
+    editor:
+      preview: false
+    files:
+      - name: "infos"
+        label: "✍️ Textes & photos"
+        file: "content/infos.json"
+        fields:
+          - { label: "Nom du site (en haut à gauche)", name: "nom_site", widget: "string" }
+          - { label: "Grande phrase d'accueil", name: "accroche", widget: "string" }
+          - { label: "Lien du formulaire « Idée de tarif » (Tally)", name: "lien_tarif", widget: "string" }
+          - { label: "Titre de l'introduction", name: "intro_titre", widget: "string" }
+          - { label: "Texte d'introduction (saute une ligne entre deux paragraphes)", name: "intro_texte", widget: "text" }
+          - label: "Les étapes (ma démarche)"
+            name: "etapes"
+            widget: "list"
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: "Titre (ex. L'histoire)", name: "titre", widget: "string" }
+              - { label: "Sous-titre", name: "sous_titre", widget: "string", required: false }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "Texte", name: "texte", widget: "text" }
+          - { label: "Photo de moi", name: "photo", widget: "image" }
+          - { label: "Titre « Mon univers »", name: "titre_univers", widget: "string" }
+          - { label: "Texte « Mon univers » (saute une ligne entre deux paragraphes)", name: "presentation", widget: "text" }
+          - { label: "Instagram (juste le pseudo)", name: "instagram", widget: "string", required: false }
