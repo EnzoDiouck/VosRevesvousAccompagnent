@@ -21,6 +21,7 @@
     document.querySelectorAll('[data-bind]').forEach(function (el) {
       var v = d[el.dataset.bind];
       if (v) el.textContent = v;
+      else if (el.dataset.bind in d) el.hidden = true; // champ vidé dans l'admin : on masque
     });
     document.querySelectorAll('[data-bind-src]').forEach(function (el) {
       var v = d[el.dataset.bindSrc];

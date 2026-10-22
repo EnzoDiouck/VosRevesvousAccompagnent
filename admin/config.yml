@@ -37,6 +37,8 @@ collections:
               - { label: "Photo", name: "image", widget: "image", required: false }
               - { label: "Texte", name: "texte", widget: "text" }
           - { label: "Photo de moi", name: "photo", widget: "image" }
+          - { label: "Petit titre au-dessus (ex. Qui suis-je ?)", name: "surtitre_univers", widget: "string", required: false }
           - { label: "Titre « Mon univers »", name: "titre_univers", widget: "string" }
           - { label: "Texte « Mon univers » (saute une ligne entre deux paragraphes)", name: "presentation", widget: "text" }
+          - { label: "Citation", name: "citation", widget: "string", required: false }
           - { label: "Instagram (juste le pseudo)", name: "instagram", widget: "string", required: false }
